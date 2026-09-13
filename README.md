@@ -59,6 +59,7 @@ macOS: `brew install --cask android-platform-tools`
 | `connect [IP:PORT KODE]` | sambung; pairing bila argumen diberikan; auto-discover via mDNS |
 | `scan [profil]` | simpan snapshot paket + daftar kandidat bloat |
 | `debloat [profil]` | hapus bloat; yang dikunci OEM dinetralkan otomatis |
+| `debloat --with-optional` | sertakan tier opsional (pilihan pribadi, lihat di bawah) |
 | `tweaks [profil]` | terapkan setelan dari profil |
 | `check [profil]` | periksa setelan **tanpa mengubah apa pun** |
 | `doctor` | kesehatan sistem + deteksi paket/setelan yang kembali |
@@ -92,6 +93,12 @@ OEM_PATTERN='xiaomi|miui|redmi'    <- untuk menyorot sisa paket OEM saat scan
 REMOVE="
 com.miui.analytics
 com.miui.msa.global
+"
+
+# Opsional: aman dihapus tapi PILIHAN PRIBADI (aplikasi yang banyak dipakai
+# orang). Hanya ikut terhapus bila dijalankan dengan --with-optional.
+REMOVE_OPTIONAL="
+com.miui.weather2
 "
 
 # format: namespace kunci nilai  # label

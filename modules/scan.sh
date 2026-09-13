@@ -35,6 +35,10 @@ for p in ${REMOVE:-}; do
   if pkg_installed "$p"; then echo "$p" >> "$DIR/candidates.txt"; n_rm=$((n_rm+1)); else n_miss=$((n_miss+1)); fi
 done
 ok "$n_rm kandidat terpasang  (${n_miss} tidak ada di perangkat ini)"
+if [ -n "${REMOVE_OPTIONAL:-}" ]; then
+  n_opt=0; for p in ${REMOVE_OPTIONAL}; do pkg_installed "$p" && n_opt=$((n_opt+1)); done
+  info "$n_opt kandidat OPSIONAL (pilihan pribadi) — pakai: debloat --with-optional"
+fi
 [ "$n_rm" -gt 0 ] && sed 's/^/    /' "$DIR/candidates.txt" | head -40
 
 head1 "Sisa paket OEM yang BELUM dikenali profil"

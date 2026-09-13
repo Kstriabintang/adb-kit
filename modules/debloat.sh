@@ -3,12 +3,17 @@
 source "$(dirname "${BASH_SOURCE[0]}")/../lib/common.sh"
 require_device
 DIR="$(device_dir)"; mkdir -p "$DIR"
+WITH_OPT=0
+if [ "${1:-}" = "--with-optional" ]; then WITH_OPT=1; shift; fi
 PROFILE="$(pick_profile "${1:-}")"
 # shellcheck disable=SC1090
 source "$PROFILE"
 
 head1 "Debloat — profil $(basename "$PROFILE" .conf)"
-todo=(); for p in ${REMOVE:-}; do pkg_installed "$p" && todo+=("$p"); done
+CANDIDATES="${REMOVE:-}"
+[ "$WITH_OPT" = 1 ] && CANDIDATES="$CANDIDATES ${REMOVE_OPTIONAL:-}"
+todo=(); for p in $CANDIDATES; do pkg_installed "$p" && todo+=("$p"); done
+[ "$WITH_OPT" = 0 ] && [ -n "${REMOVE_OPTIONAL:-}" ] && info "ada tier opsional; tambahkan --with-optional untuk menyertakannya"
 [ ${#todo[@]} -eq 0 ] && { ok "Tidak ada yang perlu dihapus."; exit 0; }
 
 info "${#todo[@]} paket akan dihapus untuk pengguna ini."

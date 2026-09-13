@@ -14,6 +14,7 @@ adb-kit — debloat & optimasi Android tanpa root, lewat ADB nirkabel
   ./adb-kit.sh connect [IP:PORT KODE]   sambungkan HP (pairing bila diberi argumen)
   ./adb-kit.sh scan    [profil]         profilkan perangkat + usulkan kandidat bloat
   ./adb-kit.sh debloat [profil]         hapus bloat (yang dikunci OEM dinetralkan)
+  ./adb-kit.sh debloat --with-optional  sertakan tier opsional (pilihan pribadi)
   ./adb-kit.sh tweaks  [profil]         terapkan setelan (DNS, animasi, anti-iklan)
   ./adb-kit.sh check   [profil]         periksa setelan TANPA mengubah apa pun
   ./adb-kit.sh doctor                   kesehatan sistem + deteksi regresi
