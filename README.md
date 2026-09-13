@@ -6,15 +6,11 @@ Hapus bloatware OEM, matikan permukaan iklan bawaan, dan percepat perangkat —
 cukup dengan mengaktifkan *Debugging nirkabel*. Tanpa root, tanpa unlock
 bootloader, tanpa membatalkan garansi. Semua perubahan bisa dibatalkan.
 
-<p align="center">
-  <img src="docs/screenshots/before-search-ads.png" width="31%" alt="Sebelum: layar pencarian penuh aplikasi promosi berbayar">
-  <img src="docs/screenshots/before-news-feed.png" width="31%" alt="Sebelum: feed berita di layar pencarian">
-  <img src="docs/screenshots/after-search-clean.png" width="31%" alt="Sesudah: hanya aplikasi milik pengguna">
-</p>
-<p align="center">
-  <em>Kiri &amp; tengah: layar Pencarian Global bawaan — aplikasi promosi berbayar, tab "Ask AI", feed berita.<br>
-  Kanan: setelah <code>debloat</code> + <code>tweaks</code> — hanya aplikasi milik pengguna.</em>
-</p>
+![Sebelum dan sesudah: kartu "Saran aplikasi" di layar Pencarian Global](docs/screenshots/before-after.png)
+
+> **Kiri — sebelum.** Kartu "Saran aplikasi" menyisipkan empat aplikasi promosi berbayar
+> (ikon berpanah-unduh): ShopeePay, SeaBank, Vita Mahjong, TeraBox.
+> **Kanan — sesudah `debloat` + `tweaks`.** Hanya aplikasi milik pengguna.
 
 **Hasil nyata pada vivo V21** (lihat [studi kasus](docs/case-study-vivo-v21.md)):
 
@@ -204,10 +200,10 @@ Perangkat Android modern sanggup menjalankan LLM secara lokal. Cek dukungan
 instruksi ARM dot-product (`asimddp`) di keluaran `scan` — bila ada, inferensi
 int8 berjalan beberapa kali lebih cepat.
 
-<p align="center">
-  <img src="docs/screenshots/local-ai-models.png" width="35%" alt="Daftar model lokal">
-  <img src="docs/screenshots/local-ai-reasoning.png" width="55%" alt="Model penalaran menjawab soal">
-</p>
+![Qwen3 1.7B menalar di perangkat, tanpa internet](docs/screenshots/local-ai.png)
+
+> Qwen3 1.7B berjalan **sepenuhnya offline** di Snapdragon 730G, menalar langkah demi
+> langkah dan sampai pada jawaban benar: `4000 ÷ 179 ≈ 22,35 jam`.
 
 Diuji pada Snapdragon 730G:
 
