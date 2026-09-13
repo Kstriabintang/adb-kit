@@ -1,10 +1,30 @@
 # adb-kit
 
-Toolkit **debloat & optimasi Android tanpa root**, lewat ADB nirkabel.
+**Toolkit debloat & optimasi Android tanpa root, lewat ADB nirkabel.**
 
 Hapus bloatware OEM, matikan permukaan iklan bawaan, dan percepat perangkat —
 cukup dengan mengaktifkan *Debugging nirkabel*. Tanpa root, tanpa unlock
 bootloader, tanpa membatalkan garansi. Semua perubahan bisa dibatalkan.
+
+<p align="center">
+  <img src="docs/screenshots/before-search-ads.png" width="31%" alt="Sebelum: layar pencarian penuh aplikasi promosi berbayar">
+  <img src="docs/screenshots/before-news-feed.png" width="31%" alt="Sebelum: feed berita di layar pencarian">
+  <img src="docs/screenshots/after-search-clean.png" width="31%" alt="Sesudah: hanya aplikasi milik pengguna">
+</p>
+<p align="center">
+  <em>Kiri &amp; tengah: layar Pencarian Global bawaan — aplikasi promosi berbayar, tab "Ask AI", feed berita.<br>
+  Kanan: setelah <code>debloat</code> + <code>tweaks</code> — hanya aplikasi milik pengguna.</em>
+</p>
+
+**Hasil nyata pada vivo V21** (lihat [studi kasus](docs/case-study-vivo-v21.md)):
+
+| | Sebelum | Sesudah |
+|---|---|---|
+| Paket terpasang | 327 | **275** |
+| Frame time saat scroll | 18 ms | **12 ms** |
+| Janky frames | 0,27% | **0,00%** |
+| Iklan sistem | Jovi Home, Pencarian Global, push AppStore | **mati** |
+| vivo Push baca notifikasi | ✅ bisa | **dicabut** |
 
 ---
 
@@ -175,6 +195,31 @@ sesi yang melahirkan toolkit ini: vivo V21 (V2108), Funtouch OS 12, dari 327 →
 paket. Berisi juga hal-hal yang **gagal** dan sebabnya, hasil pengukuran nyata
 (frame time, throughput jaringan, baterai), dan cara menemukan saklar tersembunyi
 OEM lewat `settings list` dan `uiautomator dump`.
+
+---
+
+## Bonus: AI lokal 100% offline
+
+Perangkat Android modern sanggup menjalankan LLM secara lokal. Cek dukungan
+instruksi ARM dot-product (`asimddp`) di keluaran `scan` — bila ada, inferensi
+int8 berjalan beberapa kali lebih cepat.
+
+<p align="center">
+  <img src="docs/screenshots/local-ai-models.png" width="35%" alt="Daftar model lokal">
+  <img src="docs/screenshots/local-ai-reasoning.png" width="55%" alt="Model penalaran menjawab soal">
+</p>
+
+Diuji pada Snapdragon 730G:
+
+| Model | Ukuran | Kecepatan | Aritmatika |
+|---|---|---|---|
+| Gemma 3 1B | 806 MB | ~10 token/detik | ❌ salah |
+| Qwen3 1.7B | 1,28 GB | lebih lambat, mode *thinking* | ✅ **benar** |
+
+**Temuan penting:** menyetel *prompt* dan parameter memperbaiki **bentuk** jawaban —
+struktur, keringkasan, kejujuran — tetapi **tidak menambah kemampuan menalar**.
+Untuk itu, modelnya yang harus diganti. Rinciannya ada di studi kasus.
+
 
 ---
 

@@ -306,7 +306,7 @@ Pemakai per aplikasi:
 | 10165 | 14,9 | com.google.android.gms |
 
 **Penilaian jujur:** 154 mAh dari radio adalah *cell standby* — biaya tetap menjaga HP
-terdaftar di jaringan XL Axiata selama 1j45m. Itu **normal, bukan kerusakan**. Telegram
+terdaftar di jaringan <operator> selama 1j45m. Itu **normal, bukan kerusakan**. Telegram
 52,5 mAh radio adalah harga wajar koneksi standby aplikasi chat; membatasinya membuat
 pesan telat. Keduanya **bukan masalah yang bisa "diperbaiki"**.
 
@@ -750,7 +750,7 @@ Unduhan dan jaringan terasa lelet.
 ### 1. Kondisi WiFi
 
 ```
-SSID           : MUSNIATI
+SSID           : <SSID-disensor>
 Frequency      : 2412 MHz   -> band 2,4 GHz channel 1
 Wi-Fi standard : 4          -> 802.11n
 Tx / Rx link   : 72 / 65 Mbps

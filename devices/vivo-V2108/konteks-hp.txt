@@ -9,7 +9,7 @@ PERANGKAT
 - Penyimpanan 107 GB, terpakai ~21 GB
 - Baterai 4000 mAh (terukur 3924 mAh), kondisi GOOD
 - Kamera: 5 sensor, Camera2 API LEVEL_3 (GCam/LMC didukung penuh)
-- Operator XL Axiata, LTE, SIM slot 2 kosong
+- Operator operator seluler, LTE, SIM slot 2 kosong
 - Patch keamanan berhenti 2023-10-01 (vivo tidak lagi mengirim update)
 
 SUDAH DIOPTIMASI (Sept 2026)
