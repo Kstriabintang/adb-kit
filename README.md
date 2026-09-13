@@ -24,6 +24,31 @@ bootloader, tanpa membatalkan garansi. Semua perubahan bisa dibatalkan.
 
 ---
 
+## Tangkapan layar
+
+### Sebelum
+
+![Layar bawaan penuh iklan](docs/screenshots/gallery-before.png)
+
+| | |
+|---|---|
+| **Kiri** | **Jovi Home** — panel geser-kiri berisi rekomendasi video YouTube dan kartu "Popular Today" |
+| **Tengah** | **Pencarian Global** — kartu "Saran aplikasi" menyisipkan empat aplikasi promosi berbayar berpanah-unduh, plus tab "Ask AI" |
+| **Kanan** | **Feed berita** di layar pencarian yang sama, dimuat dari jaringan setiap kali dibuka |
+
+### Sesudah
+
+![Layar bersih setelah debloat](docs/screenshots/gallery-after.png)
+
+| | |
+|---|---|
+| **Kiri** | Home screen — perhatikan **indikator halaman tinggal satu titik**: panel Jovi Home hilang |
+| **Kanan** | Pencarian Global — tanpa aplikasi promosi, tanpa tab "Ask AI", tanpa feed berita |
+
+> Kotak pencarian sengaja disensor pada tangkapan di atas karena memuat riwayat kueri.
+
+---
+
 ## Kenapa ini aman
 
 Penghapusan memakai `pm uninstall -k --user 0`, yang hanya mencabut aplikasi
@@ -200,10 +225,15 @@ Perangkat Android modern sanggup menjalankan LLM secara lokal. Cek dukungan
 instruksi ARM dot-product (`asimddp`) di keluaran `scan` — bila ada, inferensi
 int8 berjalan beberapa kali lebih cepat.
 
-![Qwen3 1.7B menalar di perangkat, tanpa internet](docs/screenshots/local-ai.png)
+![AI lokal berjalan offline di perangkat](docs/screenshots/gallery-local-ai.png)
 
-> Qwen3 1.7B berjalan **sepenuhnya offline** di Snapdragon 730G, menalar langkah demi
-> langkah dan sampai pada jawaban benar: `4000 ÷ 179 ≈ 22,35 jam`.
+| | |
+|---|---|
+| **Kiri** | Daftar model beserta ukurannya — Gemma 3 1B siap pakai, Qwen3 1.7B sedang diunduh |
+| **Tengah** | **Qwen3 1.7B** menalar langkah demi langkah dan sampai pada jawaban benar: `4000 ÷ 179 ≈ 22,35 jam` |
+| **Kanan** | **Gemma 3 1B** menjawab dalam Bahasa Indonesia — metrik kecepatan tampil di bawah jawaban: `10,18 token/detik` |
+
+Keduanya berjalan **sepenuhnya offline**. Tidak ada data yang meninggalkan perangkat.
 
 Diuji pada Snapdragon 730G:
 
