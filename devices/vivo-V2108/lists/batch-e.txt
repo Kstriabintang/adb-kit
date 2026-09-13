@@ -1,0 +1,4 @@
+com.vivo.weather
+com.vivo.weather.provider
+com.vivo.widgetweather
+com.google.android.apps.podcasts

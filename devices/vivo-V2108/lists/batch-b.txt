@@ -1,0 +1,17 @@
+com.android.bbkmusic
+com.vivo.FMRadio
+com.bbk.cloud
+com.vivo.easyshare
+com.vivo.ewarranty
+com.vivo.compass
+com.vivo.videoeditor
+com.vivo.upnpserver
+com.vivo.tws.vivotws
+com.vivo.desktopstickers
+com.vivo.livewallpaper.floatingcloud
+com.vivo.livewallpaper.plant
+com.vivo.doubleinstance
+com.vivo.widget.cleanspeed
+com.vivo.musicwidgetmix
+com.yozo.vivo.office
+com.vivo.unionpay

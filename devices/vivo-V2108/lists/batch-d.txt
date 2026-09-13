@@ -1,0 +1,15 @@
+com.wapi.wapicertmanage
+com.gsma.rcs
+com.ringclip
+com.qti.confuridialer
+com.vivo.carrierlocation
+com.google.android.gms.location.history
+com.google.android.partnersetup
+com.google.android.printservice.recommendation
+com.google.ar.lens
+com.google.android.projection.gearhead
+com.google.android.apps.tachyon
+com.vivo.nightpearl
+com.vivo.floatingball
+com.vivo.SmartKey
+com.vivo.minscreen

@@ -1,0 +1,5 @@
+com.vivo.doubletimezoneclock
+com.vivo.timerwidget
+com.vivo.widget.gallery
+com.vivo.video.floating
+com.vivo.weather.provider

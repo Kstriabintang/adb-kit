@@ -1,0 +1,7 @@
+.DS_Store
+*.log
+*.tmp
+scratch/
+# snapshot mentah bisa besar & berisi daftar aplikasi pribadi
+devices/*/backup/*.txt
+!devices/*/backup/.gitkeep

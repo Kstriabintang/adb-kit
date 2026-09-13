@@ -1,0 +1,17 @@
+com.vivo.appstore
+com.vivo.hiboard
+com.vivo.assistant
+com.vivo.pushservice
+com.vivo.website
+com.vivo.globalsearch
+com.android.bbkmusic
+com.bbk.cloud
+com.vivo.videoeditor
+com.vivo.doubleinstance
+com.bbk.theme
+com.vivo.imanager
+com.ringclip
+com.vivo.nightpearl
+com.vivo.SmartKey
+com.vivo.minscreen
+com.vivo.weather.provider
